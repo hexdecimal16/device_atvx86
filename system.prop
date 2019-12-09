@@ -1,0 +1,5 @@
+# system.prop for lollipop-x86
+#poweroff.doubleclick=1
+qemu.hw.mainkeys=1
+ro.build.id= NRD91N
+ro.build.display.id= NRD91N
