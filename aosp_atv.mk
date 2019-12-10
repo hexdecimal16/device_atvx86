@@ -13,21 +13,17 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-PRODUCT_PROPERTY_OVERRIDES += \
-	rild.libpath=/vendor/lib/libreference-ril.so
+PRODUCT_PACKAGES := \
+    bios.bin \
+    vgabios-cirrus.bin
 
-PRODUCT_COPY_FILES += \
-    device/generic/goldfish/data/etc/config.ini.tv:config.ini
-
-PRODUCT_COPY_FILES += \
-    development/sys-img/advancedFeatures.ini:advancedFeatures.ini \
-    device/generic/goldfish/data/etc/encryptionkey.img:encryptionkey.img \
-    prebuilts/qemu-kernel/x86_64/4.4/kernel-qemu2:kernel-ranchu-64
-
-# TODO: separate out a common base for arm/x86 atv SDK build.
-$(call inherit-product, device/google/atv/products/sdk_atv_armv7.mk)
+$(call inherit-product,$(LOCAL_PATH)/device.mk)
+$(call inherit-product,$(LOCAL_PATH)/packages.mk)
+$(call inherit-product, device/google/atv/products/atv_generic.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/board/generic_x86/device.mk)
 
 # Overrides
-PRODUCT_NAME := sdk_atv_x86
+PRODUCT_NAME := aosp_atv
 PRODUCT_DEVICE := generic_x86
 PRODUCT_BRAND := google
+PRODUCT_MODEL := AOSP TV
