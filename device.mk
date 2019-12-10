@@ -18,6 +18,17 @@ $(call inherit-product, device/google/atv/products/atv_base.mk)
 
 PRODUCT_DIR := $(dir $(lastword $(filter-out device/common/%,$(filter device/%,$(ALL_PRODUCTS)))))
 
+# Prebuilt Packages
+PRODUCT_PACKAGES += \
+    TVCore \
+    TVHOME \
+    Youtube \
+    TVRemote \
+    PlayStoreTV \
+    PlayServicesTV \
+    TvSampleLeanbackLauncher \
+    LeanbackSampleApp
+
 PRODUCT_PROPERTY_OVERRIDES := \
     ro.ril.hsxpa=1 \
     ro.ril.gprsclass=10 \
