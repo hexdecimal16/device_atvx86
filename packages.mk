@@ -23,7 +23,6 @@ PRODUCT_PACKAGES := \
     Galaxy4 \
     GlobalTime \
     HoloSpiralWallpaper \
-    Launcher3 \
     LiveWallpapers \
     LiveWallpapersPicker \
     MagicSmokeWallpapers \
@@ -95,7 +94,13 @@ PRODUCT_PACKAGES += \
     libffmpeg_omx \
     media_codecs_ffmpeg.xml
 
-# Third party apps
+# TV apps
 PRODUCT_PACKAGES += \
-    Eleven \
-    TSCalibration2 \
+    TVCore \
+    TVHOME \
+    Youtube \
+    TVRemote \
+    PlayStoreTV \
+    PlayServicesTV \
+    TvSampleLeanbackLauncher \
+    LeanbackSampleApp
