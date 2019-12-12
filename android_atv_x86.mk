@@ -21,7 +21,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/board/generic_x86/device.mk)
 $(call inherit-product,$(LOCAL_PATH)/device.mk)
 $(call inherit-product,$(LOCAL_PATH)/packages.mk)
 # Overrides
-PRODUCT_NAME := android_x86
-PRODUCT_BRAND := Android-x86
+PRODUCT_NAME := android_atv_x86
+PRODUCT_BRAND := AndroidATV-x86
 PRODUCT_DEVICE := x86
 PRODUCT_MODEL := Generic Android-x86

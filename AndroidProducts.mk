@@ -15,4 +15,4 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/android_x86.mk
+    $(LOCAL_DIR)/android_atv_x86.mk
