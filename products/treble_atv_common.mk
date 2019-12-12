@@ -62,8 +62,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     netutils-wrapper-1.0
 
+# Support for the devices with no VNDK enforcing
 PRODUCT_COPY_FILES += \
-    build/make/target/product/gsi/init.gsi.rc:system/etc/init/init.gsi.rc
+    build/make/target/product/vndk/init.gsi.rc:system/etc/init/init.gsi.rc \
+    build/make/target/product/vndk/init.noenforce.rc:system/etc/init/gsi/init.noenforce.rc
 
 # Name space configuration file for non-enforcing VNDK
 PRODUCT_PACKAGES += \
@@ -75,4 +77,5 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 
 # privapp-permissions whitelisting
 PRODUCT_COPY_FILES += \
-    device/google/atv/permissions/privapp-permissions-atv-gsi.xml:system/etc/permissions/privapp-permissions-atv-gsi.xml
+    vendor/google/data/etc/permissions/privapp-permissions-google.xml:system/etc/permissions/privapp-permissions-google.xml \
+    vendor/google/data/etc/permissions/privapp-permissions-atv.xml:system/etc/permissions/privapp-permissions-atv.xml

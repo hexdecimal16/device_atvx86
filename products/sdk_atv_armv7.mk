@@ -16,8 +16,6 @@
 
 PRODUCT_IS_ATV_SDK := true
 
-PRODUCT_USE_DYNAMIC_PARTITIONS := true
-
 PRODUCT_PACKAGES := \
     LeanbackSampleApp \
     TelephonyProvider \

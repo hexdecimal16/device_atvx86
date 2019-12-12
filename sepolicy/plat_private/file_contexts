@@ -1,3 +1,0 @@
-# surfaceflinger
-/dev/dri(/.*)?               u:object_r:gpu_device:s0
-/dev/tty0                    u:object_r:gpu_device:s0

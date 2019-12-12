@@ -14,5 +14,14 @@
 # limitations under the License.
 #
 
-PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/android_x86.mk
+# includes the base of Android-x86 platform
+$(call inherit-product,device/generic/common/x86.mk)
+$(call inherit-product, device/google/atv/products/atv_generic.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/board/generic_x86/device.mk)
+$(call inherit-product,$(LOCAL_PATH)/device.mk)
+$(call inherit-product,$(LOCAL_PATH)/packages.mk)
+# Overrides
+PRODUCT_NAME := android_x86
+PRODUCT_BRAND := Android-x86
+PRODUCT_DEVICE := x86
+PRODUCT_MODEL := Generic Android-x86
